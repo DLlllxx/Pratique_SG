@@ -18,11 +18,11 @@ public class Compte {
 	            System.out.println("Vous ne pouvez pas déposer un montant moins 0");
 	            return;
 	        }
-	        System.out.println("Le montant initial sur votre compte " + compte + ": " + total);
+	        System.out.println("Le montant initial sur votre compte " + compte + ": " + total +"€‎");
 	        total += montant;
 	        transactions.add(new Transaction(depose, new Date(), montant, total));
 	        
-	        System.out.println("Vous avez déposé "+montant+" sur votre compte "+compte+ " Maintenant le montant total est "+total);
+	        System.out.println("Vous avez déposé "+montant +"€‎" +" sur votre compte "+compte+ " Maintenant le montant total est "+total+"€‎");
 	    }
 	    
 	    public void tirer(double montant) {
@@ -35,21 +35,22 @@ public class Compte {
 	            System.out.println("Insuffisant");
 	            return;
 	        }
-	        System.out.println("Le montant initial sur votre compte " + compte + ": " + total);
+	        System.out.println("Le montant initial sur votre compte " + compte + ": " + total+"€‎");
 	        total -= montant;
 	        transactions.add(new Transaction(tire, new Date(), montant, total));
 	        
-	        System.out.println("Vous avez tiré "+montant+" sur votre compte "+compte+ " Maintenant le montant total est "+total);
+	        System.out.println("Vous avez tiré "+montant+"€‎" +" sur votre compte "+compte+ " Maintenant le montant total est "+total+"€‎");
 	    }
 	    
 	    public void historique() {
+	    	System.out.println("************");
 	        System.out.println("Historique du compte " + compte + ":");
 	        
 	        for (Transaction t : transactions) {
 	            System.out.println(t);
 	        }
 	        
-	        System.out.println("Montant total sur le compte "+compte +": " + total);
+	        System.out.println("Montant total sur le compte "+compte +": " + total+"€‎");
 	    }
 	    public int getRandomNumber(int min, int max) {
 	        return (int) ((Math.random() * (max - min)) + min);

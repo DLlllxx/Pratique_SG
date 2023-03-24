@@ -14,7 +14,7 @@ public class Transaction {
      }
      
      public String toString() {
-         return operation + " " + date + " $" + montant + " total: $" + total;
+         return operation + " " + date + montant + "€‎ total: " + total +"€‎";
      }
  
 }
